@@ -1,0 +1,211 @@
+@charset "UTF-8";
+html {
+  font-size: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+}
+
+body main {
+  font-family: sans-serif;
+}
+body main .second_box #step-active9 {
+  display: none;
+  width: 90%;
+  margin: auto;
+  margin-top: 1.875rem;
+  flex-direction: column;
+}
+body main .second_box #step-active9 .main-text {
+  font-size: 1.375rem;
+  color: rgb(18, 51, 100);
+  font-weight: 600;
+  flex: 1;
+  width: 30%;
+}
+body main .second_box #step-active9 .inside {
+  margin-top: 0;
+  width: 75%;
+  margin: auto;
+  padding-top: 2.1875rem;
+}
+body main .second_box #step-active9 .inside .main_description {
+  width: 100%;
+}
+body main .second_box #step-active9 .inside .main_description div:first-child {
+  font-weight: 600;
+}
+body main .second_box #step-active9 .inside .main_description div:first-child .main_string {
+  font-size: 1.125rem;
+}
+body main .second_box #step-active9 .inside .main_description div:first-child .main_string2 {
+  font-size: 0.875rem;
+  margin-top: 1.25rem;
+  color: rgb(240, 127, 123);
+}
+body main .second_box #step-active9 .inside .main_description .sub_string1 {
+  margin-top: 1.25rem;
+  font-size: 1rem;
+}
+body main .second_box #step-active9 .inside .sub_description {
+  margin-top: 2.5rem;
+  display: grid;
+  grid-template-columns: 35% 65%; /* .column1과 .column2의 너비를 설정 */
+  height: 100%;
+  gap: 2.5rem;
+}
+body main .second_box #step-active9 .inside .sub_description .column1 {
+  height: 100%;
+  grid-column: 1; /* 첫 번째 열에 배치 */
+  padding-left: 0.9375rem;
+}
+body main .second_box #step-active9 .inside .sub_description .column1 .row {
+  height: 6.25rem;
+}
+body main .second_box #step-active9 .inside .sub_description .column1 .row .row-1 span:first-child {
+  accent-color: rgb(18, 51, 100);
+}
+body main .second_box #step-active9 .inside .sub_description .column1 .row div:last-child {
+  padding-top: 0.625rem;
+}
+body main .second_box #step-active9 .inside .sub_description .column1 .row div:last-child input {
+  width: 100%;
+  height: 3.125rem;
+  border: 0.0625rem solid darkgray;
+  border-radius: 0.25rem;
+  padding-right: 2.1875rem;
+  outline: none;
+  text-align: right;
+}
+body main .second_box #step-active9 .inside .sub_description .column1 .row div:last-child input:focus {
+  color: black;
+  outline: none;
+}
+body main .second_box #step-active9 .inside .sub_description .column1 .row div:last-child span:last-child {
+  position: absolute;
+  top: 1.5625rem;
+  right: 1.25rem;
+}
+body main .second_box #step-active9 .inside .sub_description .column1 .row:last-child input {
+  pointer-events: none;
+}
+body main .second_box #step-active9 .inside .sub_description .column2 {
+  grid-column: 2; /* 두 번째 열에 배치 */
+  display: grid;
+  grid-template-columns: 50% 50%; /* .row 안의 두 div의 너비 설정 */
+  padding: 1.25rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.875rem;
+  margin-bottom: 1.25rem;
+  margin-right: 2.5rem;
+  border: 0.0625rem solid darkgray;
+  border-radius: 0.3125rem;
+}
+body main .second_box #step-active9 .inside .sub_description .column2 .row {
+  display: contents; /* 자식 요소만 그리드에 포함 */
+}
+body main .second_box #step-active9 .inside .sub_description .column2 .row div:first-child {
+  grid-column: 1; /* 첫 번째 div는 첫 번째 열에 배치 */
+}
+body main .second_box #step-active9 .inside .sub_description .column2 .row div:first-child input {
+  accent-color: rgb(18, 51, 100);
+}
+body main .second_box #step-active9 .inside .sub_description .column2 .row div:last-child {
+  grid-column: 2; /* 두 번째 div는 두 번째 열에 배치 */
+  justify-self: end; /* 마지막 div를 오른쪽 끝으로 배치 */
+  background-color: rgba(18, 51, 100, 0.05);
+  width: 9.375rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding-right: 0.9375rem;
+  border-radius: 1.875rem;
+}
+body main .second_box #step-active9 .inside .result-button {
+  display: flex;
+  margin: auto;
+  width: 9.375rem;
+  height: 2.5rem;
+  background-color: rgba(18, 51, 100, 0.05);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  gap: 0.625rem;
+}
+body main .second_box #step-active9 .inside .result-button svg {
+  height: auto;
+  width: 1.25rem;
+  fill: darkgray;
+}
+body main .second_box #step-active9 .inside .result-button a {
+  color: darkgray;
+  text-decoration: none;
+}
+body main .second_box #step-active9 .inside .result-button:hover {
+  background-color: rgb(18, 51, 100);
+}
+body main .second_box #step-active9 .inside .result-button:hover svg {
+  fill: white;
+}
+body main .second_box #step-active9 .inside .result-button:hover a {
+  color: white;
+  font-weight: 600;
+}
+body main .second_box #step-active9 .button_wrapper {
+  width: 100%;
+  height: 3.125rem;
+  display: flex;
+  right: 0;
+  margin-top: 6.25rem;
+  margin-bottom: 9.375rem;
+  justify-content: flex-end; /* Align children to the right */
+  align-items: center; /* Center children vertically */
+  font-size: 1rem;
+  gap: 0.625rem;
+}
+body main .second_box #step-active9 .button_wrapper span {
+  right: 0;
+  width: 6.25rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.3125rem;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+body main .second_box #step-active9 .button_wrapper span:first-child {
+  background-color: rgb(18, 51, 100);
+}
+body main .second_box #step-active9 .button_wrapper span:first-child a {
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+}
+body main .second_box #step-active9 .button_wrapper span:last-child {
+  background-color: rgba(18, 51, 100, 0.05);
+  border: ptgr(1) solid rgb(18, 51, 100);
+}
+body main .second_box #step-active9 .button_wrapper span:last-child a {
+  color: darkgray;
+  text-decoration: none;
+}
+
+.row:before {
+  display: table;
+  content: none !important;
+}
+
+/*# sourceMappingURL=registration-main-secondstep9.css.map */

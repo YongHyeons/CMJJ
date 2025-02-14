@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>취미존중 - 클래스 등록</title>
+
+
+    <meta name="_csrf" content="${_csrf.token}">
+	<meta name="_csrf_header" content="${_csrf.headerName}">
+	<meta name="csrf-token" content="${_csrf.token}"/>
+	
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+    
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcj4F43-WxIxYKl9mLCYuMhjVseno24EU&libraries=places"></script>
+    
+    <link rel="stylesheet" href="/css/registration-header.css">
+
+    <link rel="stylesheet" href="/css/registration-main-secondstep9.css">
+    <link rel="stylesheet" href="/css/registration-main-secondstep8.css">
+
+    <link rel="stylesheet" href="/css/registration-main-secondstep7.css">
+    <link rel="stylesheet" href="/css/registration-main-secondstep6.css">
+    <link rel="stylesheet" href="/css/registration-main-secondstep5.css">
+    <link rel="stylesheet" href="/css/registration-main-secondstep4.css">
+    <link rel="stylesheet" href="/css/registration-main-secondstep3.css">
+    <link rel="stylesheet" href="/css/registration-main-secondstep2.css">
+    <link rel="stylesheet" href="/css/registration-main-firststep.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    
+</head>
+    <body>
+        <header th:fragment = "header">
+            <div class = "first">
+                <a href="/main">
+                    <div class = "logo">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="120" zoomAndPan="magnify" viewBox="0 0 1500 449.999984" height="40" preserveAspectRatio="xMidYMid meet" version="1.0"><defs><g/></defs><g fill="#000000" fill-opacity="1"><g transform="translate(0.774502, 374.591265)"><g><path d="M 264.40625 -193.8125 C 275.539062 -184.90625 275.46875 -175.019531 264.1875 -164.15625 C 252.914062 -153.289062 240.875 -153.289062 228.0625 -164.15625 L 146.203125 -233.078125 L 64.328125 -164.15625 C 51.515625 -153.289062 39.46875 -153.289062 28.1875 -164.15625 C 16.914062 -175.019531 16.847656 -184.90625 27.984375 -193.8125 L 106.515625 -257.3125 L 41.765625 -257.3125 C 31.460938 -257.3125 26.238281 -264.34375 26.09375 -278.40625 C 25.957031 -292.46875 31.179688 -299.5 41.765625 -299.5 L 120.296875 -299.5 L 120.296875 -328.3125 C 120.296875 -341.675781 128.578125 -348.359375 145.140625 -348.359375 C 161.710938 -348.359375 170 -341.675781 170 -328.3125 L 170 -299.5 L 248.53125 -299.5 C 259.394531 -299.5 264.753906 -292.46875 264.609375 -278.40625 C 264.472656 -264.34375 259.113281 -257.3125 248.53125 -257.3125 L 185.875 -257.3125 Z M 347.53125 -9.1875 C 347.53125 4.175781 339.242188 10.859375 322.671875 10.859375 C 306.109375 10.859375 297.828125 4.175781 297.828125 -9.1875 L 297.828125 -324.140625 C 297.828125 -337.503906 306.109375 -344.1875 322.671875 -344.1875 C 339.242188 -344.1875 347.53125 -337.503906 347.53125 -324.140625 Z M 175.015625 -9.1875 C 175.015625 4.175781 166.726562 10.859375 150.15625 10.859375 C 133.59375 10.859375 125.3125 4.175781 125.3125 -9.1875 L 125.3125 -98.15625 C 125.3125 -99.269531 125.171875 -100.242188 124.890625 -101.078125 C 124.609375 -101.921875 123.492188 -102.34375 121.546875 -102.34375 L 22.140625 -102.34375 C 11.835938 -102.34375 6.613281 -109.375 6.46875 -123.4375 C 6.332031 -137.5 11.554688 -144.53125 22.140625 -144.53125 L 148.703125 -144.53125 C 158.722656 -144.53125 165.613281 -141.953125 169.375 -136.796875 C 173.132812 -131.640625 175.015625 -125.863281 175.015625 -119.46875 Z M 175.015625 -9.1875 "/></g></g></g><g fill="#000000" fill-opacity="1"><g transform="translate(398.003094, 374.591265)"><g><path d="M 337.921875 -9.1875 C 337.921875 4.175781 329.632812 10.859375 313.0625 10.859375 C 296.5 10.859375 288.21875 4.175781 288.21875 -9.1875 L 288.21875 -324.140625 C 288.21875 -337.503906 296.5 -344.1875 313.0625 -344.1875 C 329.632812 -344.1875 337.921875 -337.503906 337.921875 -324.140625 Z M 225.140625 -68.921875 C 225.140625 -55.554688 216.851562 -48.800781 200.28125 -48.65625 C 183.71875 -48.519531 175.4375 -55.273438 175.4375 -68.921875 L 175.4375 -288.640625 C 175.4375 -289.742188 175.296875 -290.710938 175.015625 -291.546875 C 174.734375 -292.390625 173.617188 -292.8125 171.671875 -292.8125 L 83.546875 -292.8125 C 81.585938 -292.8125 80.46875 -292.390625 80.1875 -291.546875 C 79.914062 -290.710938 79.78125 -289.742188 79.78125 -288.640625 L 79.78125 -94.8125 C 79.78125 -93.695312 79.914062 -92.722656 80.1875 -91.890625 C 80.46875 -91.054688 81.585938 -90.640625 83.546875 -90.640625 L 150.796875 -90.640625 C 161.367188 -90.640625 166.585938 -83.609375 166.453125 -69.546875 C 166.316406 -55.484375 161.097656 -48.453125 150.796875 -48.453125 L 56.390625 -48.453125 C 46.367188 -48.453125 39.476562 -51.023438 35.71875 -56.171875 C 31.957031 -61.328125 30.078125 -67.109375 30.078125 -73.515625 L 30.078125 -309.9375 C 30.078125 -316.34375 31.957031 -322.117188 35.71875 -327.265625 C 39.476562 -332.421875 46.367188 -335 56.390625 -335 L 198.828125 -335 C 208.847656 -335 215.738281 -332.421875 219.5 -327.265625 C 223.257812 -322.117188 225.140625 -316.34375 225.140625 -309.9375 Z M 225.140625 -68.921875 "/></g></g></g><g fill="#000000" fill-opacity="1"><g transform="translate(785.624762, 374.591265)"><g><path d="M 315.359375 -222.21875 C 326.773438 -214.695312 327.75 -205.15625 318.28125 -193.59375 C 308.820312 -182.039062 298.519531 -180.023438 287.375 -187.546875 L 179.1875 -266.078125 L 71.015625 -187.546875 C 59.867188 -180.023438 49.5625 -182.039062 40.09375 -193.59375 C 30.625 -205.15625 31.597656 -214.695312 43.015625 -222.21875 L 142.015625 -292.8125 L 61.8125 -292.8125 C 51.507812 -292.8125 46.289062 -299.84375 46.15625 -313.90625 C 46.019531 -327.96875 51.238281 -335 61.8125 -335 L 296.5625 -335 C 307.425781 -335 312.785156 -327.96875 312.640625 -313.90625 C 312.503906 -299.84375 307.144531 -292.8125 296.5625 -292.8125 L 215.953125 -292.8125 Z M 106.09375 20.46875 C 96.070312 20.46875 89.179688 17.890625 85.421875 12.734375 C 81.660156 7.585938 79.78125 1.8125 79.78125 -4.59375 L 79.78125 -82.703125 C 79.78125 -96.066406 88.0625 -102.75 104.625 -102.75 C 121.195312 -102.75 129.484375 -96.066406 129.484375 -82.703125 L 129.484375 -25.890625 C 129.484375 -24.785156 129.625 -23.8125 129.90625 -22.96875 C 130.1875 -22.132812 131.300781 -21.71875 133.25 -21.71875 L 322.890625 -21.71875 C 333.742188 -21.71875 339.03125 -14.6875 338.75 -0.625 C 338.476562 13.4375 333.050781 20.46875 322.46875 20.46875 Z M 203.84375 -142.4375 C 203.84375 -136.03125 201.960938 -130.25 198.203125 -125.09375 C 194.441406 -119.945312 187.550781 -117.375 177.53125 -117.375 L 22.140625 -117.375 C 11.554688 -117.375 6.332031 -124.40625 6.46875 -138.46875 C 6.613281 -152.53125 11.835938 -159.5625 22.140625 -159.5625 L 150.375 -159.5625 C 152.320312 -159.5625 153.429688 -159.28125 153.703125 -158.71875 C 153.984375 -158.164062 154.125 -158.445312 154.125 -159.5625 L 154.125 -203 C 154.125 -216.363281 162.410156 -223.046875 178.984375 -223.046875 C 195.554688 -223.046875 203.84375 -216.363281 203.84375 -203 Z M 203.84375 -142.4375 "/></g></g></g><g fill="#000000" fill-opacity="1"><g transform="translate(1143.172305, 374.591265)"><g><path d="M 295.3125 -40.515625 C 295.3125 -18.515625 286.46875 0.414062 268.78125 16.28125 C 251.101562 32.15625 229.59375 40.09375 204.25 40.09375 C 178.632812 40.09375 156.914062 32.226562 139.09375 16.5 C 121.269531 0.769531 112.359375 -18.234375 112.359375 -40.515625 C 112.359375 -62.796875 121.269531 -81.734375 139.09375 -97.328125 C 149.394531 -106.515625 161.226562 -113.054688 174.59375 -116.953125 L 174.59375 -134.921875 C 174.59375 -136.035156 174.453125 -137.007812 174.171875 -137.84375 C 173.898438 -138.675781 172.789062 -139.09375 170.84375 -139.09375 L 22.140625 -139.09375 C 11.835938 -139.09375 6.613281 -146.125 6.46875 -160.1875 C 6.332031 -174.25 11.554688 -181.28125 22.140625 -181.28125 L 197.984375 -181.28125 C 208.015625 -181.28125 214.910156 -178.703125 218.671875 -173.546875 C 222.429688 -168.398438 224.3125 -162.625 224.3125 -156.21875 L 224.3125 -119.046875 C 241.019531 -115.984375 255.773438 -108.742188 268.578125 -97.328125 C 286.398438 -81.734375 295.3125 -62.796875 295.3125 -40.515625 Z M 315.359375 -230.578125 C 326.773438 -223.054688 327.75 -213.515625 318.28125 -201.953125 C 308.820312 -190.398438 298.519531 -188.382812 287.375 -195.90625 L 179.1875 -269.84375 L 71.015625 -195.90625 C 59.867188 -188.382812 49.5625 -190.398438 40.09375 -201.953125 C 30.625 -213.515625 31.597656 -223.054688 43.015625 -230.578125 L 137.421875 -292.8125 L 61.8125 -292.8125 C 51.507812 -292.8125 46.289062 -299.84375 46.15625 -313.90625 C 46.019531 -327.96875 51.238281 -335 61.8125 -335 L 296.5625 -335 C 307.425781 -335 312.785156 -327.96875 312.640625 -313.90625 C 312.503906 -299.84375 307.144531 -292.8125 296.5625 -292.8125 L 220.546875 -292.8125 Z M 245.609375 -40.515625 C 245.609375 -51.097656 241.566406 -60.078125 233.484375 -67.453125 C 225.410156 -74.835938 215.664062 -78.53125 204.25 -78.53125 C 192.832031 -78.53125 183.085938 -74.835938 175.015625 -67.453125 C 166.941406 -60.078125 162.90625 -51.097656 162.90625 -40.515625 C 162.90625 -30.210938 166.941406 -21.300781 175.015625 -13.78125 C 183.085938 -6.257812 192.832031 -2.5 204.25 -2.5 C 215.664062 -2.5 225.410156 -6.257812 233.484375 -13.78125 C 241.566406 -21.300781 245.609375 -30.210938 245.609375 -40.515625 Z M 245.609375 -40.515625 "/></g></g></g></svg>
+                    </div>
+                </a>
+                <a class = "search" href="/search">
+                    <div class = "search_box">
+                        <div class = "input">
+                            <input type = 'text' placeholder = '검색어를 입력해 주세요.'>
+                        </div>
+                    
+                        <div class = "search_button">
+                            <img src = "/image/icon/search_icon.png"/>
+                        </div>
+                        
+                    </div>	
+                </a>
+
+                <div class = "right_top"> 
+
+                    <a class = "alarm_icon">
+                        <div class = "center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="800px" height="800px" viewBox="0 0 24 24" fill="none"><script xmlns=""/>
+                                <path d="M12.0009 5C13.4331 5 14.8066 5.50571 15.8193 6.40589C16.832 7.30606 17.4009 8.52696 17.4009 9.8C17.4009 11.7691 17.846 13.2436 18.4232 14.3279C19.1606 15.7133 19.5293 16.406 19.5088 16.5642C19.4849 16.7489 19.4544 16.7997 19.3026 16.9075C19.1725 17 18.5254 17 17.2311 17H6.77066C5.47638 17 4.82925 17 4.69916 16.9075C4.54741 16.7997 4.51692 16.7489 4.493 16.5642C4.47249 16.406 4.8412 15.7133 5.57863 14.3279C6.1558 13.2436 6.60089 11.7691 6.60089 9.8C6.60089 8.52696 7.16982 7.30606 8.18251 6.40589C9.19521 5.50571 10.5687 5 12.0009 5ZM12.0009 5V3M9.35489 20C10.0611 20.6233 10.9888 21.0016 12.0049 21.0016C13.0209 21.0016 13.9486 20.6233 14.6549 20" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <script xmlns=""/>
+                            </svg>
+                        </div>
+                    </a>
+                    <a class = "user_icon">
+                        <div class = "center">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="#000000" width="800px" height="800px" viewBox="0 0 24 24"><script xmlns=""/><path d="M12,1A11,11,0,1,0,23,12,11.013,11.013,0,0,0,12,1Zm0,20a9.641,9.641,0,0,1-5.209-1.674,7,7,0,0,1,10.418,0A9.167,9.167,0,0,1,12,21Zm6.694-3.006a8.98,8.98,0,0,0-13.388,0,9,9,0,1,1,13.388,0ZM12,6a4,4,0,1,0,4,4A4,4,0,0,0,12,6Zm0,6a2,2,0,1,1,2-2A2,2,0,0,1,12,12Z"/><script xmlns=""/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="800px" height="800px" viewBox="0 0 24 24" fill="none"><script xmlns=""/>
+                                <path d="M17.9188 8.17969H11.6888H6.07877C5.11877 8.17969 4.63877 9.33969 5.31877 10.0197L10.4988 15.1997C11.3288 16.0297 12.6788 16.0297 13.5088 15.1997L15.4788 13.2297L18.6888 10.0197C19.3588 9.33969 18.8788 8.17969 17.9188 8.17969Z" fill="#292D32"/>
+                                <script xmlns=""/>
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+
+                
+            </div>
+            <div class ="row1">
+                <span class = "icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#000000" width="800px" height="800px" viewBox="0 0 16 16"><script xmlns=""/>
+                        <path clip-rule="evenodd" d="m11.98.3h-4.94c-1.51 0-2.74 1.23-2.74 2.74v1.96h1.4v-1.96c0-.74.6-1.34 1.34-1.34h4.94c.74 0 1.34.6 1.34 1.34v9.91c0 .74-.6 1.34-1.34 1.34h-4.94c-.74 0-1.34-.6-1.34-1.34v-1.95h-1.4v1.96c0 1.51 1.23 2.74 2.74 2.74h4.94c1.51 0 2.74-1.23 2.74-2.74v-9.92c0-1.51-1.23-2.74-2.74-2.74zm-3.98 11.7 4-4-4-4v3.3h-7v1.4h7z"/>
+                        <script xmlns=""/>
+                    </svg>
+                </span>
+                <span>등록</span>
+            </div>
+
+            <div class = "row2">
+                <div class = "first_row">
+                    <span id = "host_authentication_button">호스트 인증</span>
+
+                    <span id = "introduction_button">소개</span>
+                    <span id = "amount_and_schedule_button">금액 및 일정</span>
+                </div>
+    
+                <div class = "second_row">
+                    <div><a href="/guide">등록가이드 보기</a></div>
+                    <button id="saveButton" type="button" class="btn btn-primary" onclick="window.location.href='/mypage/manage';">등록 하기</button>
+                </div>
+            </div>
+        </header>
+        <main>
+            
+            <div class = "all_boxes">
+                <div class = "first_box">
+                    <div class = "step" id="step1-1">
+                        <div class = "step-name">STEP 1  호스트 인증</div>
+                        <div id = "mark_svg1" class = "mark_step"></div>
+                    </div>
+                    <div class = "step" id="step2-1">
+                        <div class = "arrow" id = "arrow1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="800px" height="800px" viewBox="0 0 24 24" fill="none"><script xmlns=""/>
+                                <path d="M17.9188 8.17969H11.6888H6.07877C5.11877 8.17969 4.63877 9.33969 5.31877 10.0197L10.4988 15.1997C11.3288 16.0297 12.6788 16.0297 13.5088 15.1997L15.4788 13.2297L18.6888 10.0197C19.3588 9.33969 18.8788 8.17969 17.9188 8.17969Z" fill="#292D32"/>
+                                <script xmlns=""/>
+                            </svg>
+                        </div>
+                        <div class = "step-name">STEP 2  클래스 소개</div>
+                        <div id = "mark_svg2" class = "mark_step"></div>
+                    </div>
+
+                    <div class = "step-sub" id = "step-sub">
+                        <div class = "step-sub-box">
+                            <div id = "sub1" class = "sub_name">제목 및 카테고리</div>
+                            <div id = "mark_svg2-1" class = "mark_step"></div>
+                        </div>
+                        <div class = "step-sub-box">
+                            <div id = "sub2" class = "sub_name">이미지</div>
+                            <div id = "mark_svg2-2" class = "mark_step"></div>
+                        </div>
+                        <div class = "step-sub-box">
+                            <div id = "sub3" class = "sub_name">상세 내용</div>
+                            <div id = "mark_svg2-3" class = "mark_step"></div>
+                        </div>
+                        <div class = "step-sub-box">
+                            <div id = "sub4" class = "sub_name">커리큘럼</div>
+                            <div id = "mark_svg2-4" class = "mark_step"></div>
+                        </div>
+                        <div class = "step-sub-box">
+                            <div id = "sub5" class = "sub_name">호스트 소개</div>
+                            <div id = "mark_svg2-5" class = "mark_step"></div>
+                        </div>
+                        <div class = "step-sub-box">
+                            <div id = "sub6" class = "sub_name">공간 정보</div>
+                            <div id = "mark_svg2-6" class = "mark_step"></div>
+                        </div>
+                        <div class = "step-sub-box">
+                            <div id = "sub7" class = "sub_name">제공 및 유의사항</div>
+                            <div id = "mark_svg2-7" class = "mark_step"></div>
+                        </div>
+                    </div>
+
+                    <div class = "step" id="step3-1">
+
+                        <div class = "step-name">STEP 3  금액 및 일정</div>
+                        <div id = "mark_svg3" class = "mark_step"></div>
+                    </div>
+
+                </div>
+                <div class = "numbers_right" id = "numbers_right">
+                    <span class = "order">1</span>
+                        <span class = "dots">···</span>
+                    <span class = "order">2</span>
+                        <span class = "dots">···</span>
+                    <span class = "order">3</span>
+                        <span class = "dots">···</span>
+                    <span class = "order">4</span>
+                        <span class = "dots">···</span>
+                    <span class = "order">5</span>
+                        <span class = "dots">···</span>
+                    <span class = "order">6</span>
+                        <span class = "dots">···</span>
+                    <span class = "order">7</span>
+                </div>
+                <div class = "second_box">
+                
+                    <form id="inputsform" name = "inputsform">
+
+                        <div class ="step-active" id = "step-active"> 
+                            <div class = "step-main-1">
+                                <div class = "main-text">STEP 1 호스트 인증</div>
+                                <div class = "inside">
+                                    <div class = "sub-text">
+                                        <div>번호 인증</div>
+                                        <div>등록 내용을 작성하기 전 호스팀을 인증해주세요</div>
+                                    </div>
+                                    
+                                    <div class = "phone_number">
+                                        <span>전화 번호</span>
+                                        <span>(필수)</span>
+                                        <div class = "boxes">
+                                            <div class = "input_box"> 
+                                                <input type = 'text' id ="phone_number" name = "phoneNumber" placeholder = '연락 가능한 휴대폰 번호를 입력해주세요'>
+                                                <span id = "feedback_icon">
+                                                </span>
+                                            </div>
+                                            <button type="button" id = "phonenumb_button">전화번호 등록</button>
+
+                                        </div>
+                                        <div class = "explain">번호 인증은 최초 클래스 등록 (1회)때만 하시면 됩니다.</div>
+                                    </div>
+                                    
+                                    <div class = "way">
+                                        <div class = "way_name">
+                                            <span>
+                                                취미존중을 알게된 경로
+                                            </span>
+                                            <span>
+                                                (선택)
+                                            </span>
+                                        </div>
+                                        <div class = "check-group">
+                                            <div class = "row">
+                                                <div class = "check">
+                                                    <span>
+                                                        <input type="checkbox" id="check_btn1"/>
+                                                    </span>
+                                                    <span class = "check_string">인스타그램</span>
+                                                </div>
+        
+                                                <div class = "check">
+                                                    <span>
+                                                        <input type="checkbox" id="check_btn2"/>
+                                                    </span>
+                                                    <span class = "check_string">이메일</span>
+                                                </div>
+                                                <div class = "check">
+                                                    <span>
+                                                        <input type="checkbox" id="check_btn3"/>
+                                                    </span>
+                                                    <span class = "check_string">구글</span>
+                                                </div>
+                                                <div class = "check">
+                                                    <span>
+                                                        <input type="checkbox" id="check_btn4"/>
+                                                    </span>
+                                                    <span class = "check_string">카카오</span>
+                                                </div>
+                                            </div>
+                                            <div class = "row">
+                                                <div class = "check">
+                                                    <span>
+                                                        <input type="checkbox" id="check_btn5"/>
+                                                    </span>
+                                                    <span class = "check_string">지인추천</span>
+                                                </div>
+                                                <div class = "check">
+                                                    <span>
+                                                        <input type="checkbox" id="check_btn6"/>
+                                                    </span>
+                                                    <span class = "check_string">수강생추천</span>
+                                                </div>
+                                                <div class = "check">
+                                                    <span>
+                                                        <input type="checkbox" id="check_btn7"/>
+                                                    </span>
+                                                    <span class = "check_string">네이버</span>
+                                                </div>
+        
+                                                <div class = "check">
+                                                    <span>
+                                                        <input type="checkbox" id="check_btn8"/>
+                                                    </span>
+                                                    <span>
+                                                        <input class = "inputbox"  type = 'text'  id = "ect_input" placeholder = '기타 입력'>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+
+                                </div>
+                                <span id = "next_button_wrapper">
+                                    <div  id = "next_button" class = "next">
+                                        <a id = "next-button-color">
+                                            다음
+                                        </a>
+                                    </div>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class ="step-active2" id = "step-active2">
+                            <div class = "step-main-2-1">
+                                <div class = "main-text">STEP 2 클래스 소개</div>
+
+                                <div class = "inside">
+                                    <div class = "sub-text">
+                                        <div>제목 및 카테고리</div>
+                                        <div>클래스/모임 제목과 카테고리를 등록해해주세요</div>
+                                    </div>
+                                    <div class = "class_name">
+                                        <span>클래스 명</span>
+                                        <span>(필수)</span>
+                                        <div class = "class_name_input">
+                                            <span><input type = 'text' placeholder = '클래스명을 입력해 주세요.' name = "title" id = "class_name_input_box"></span>
+                                            <span id = "charCount">0/30</span>
+                                        </div>
+                                    </div>
+
+                                    <div class = "category_choice">
+                                        <span>카테고리</span>
+                                        <span>(필수)</span>
+                                        <div class = "button_boxes">
+                                        
+                                            <div id="selectContainer1" class="select-container1">
+                                                <select id="menuFirst" class="menu_choice">
+                                                    <option value="카테고리">카테고리</option>
+                                                    <option value="핸드메이드" data-target="menuSecond1">핸드메이드</option>
+                                                    <option value="쿠킹" data-target="menuSecond2">쿠킹</option>
+                                                    <option value="플라워·가드닝">플라워·가드닝</option>
+                                                    <option value="드로잉" data-target="menuSecond3">드로잉</option>
+                                                    
+                                                    <option value="음악" data-target="menuSecond4">음악</option>
+                                                    <option value="요가·필라테스" data-target="menuSecond5">요가·필라테스</option>
+                                                    <option value="레저·스포츠" data-target="menuSecond6">레저·스포츠</option>
+                                                    <option value="뷰티" data-target="menuSecond7">뷰티</option>
+
+                                                    <option value="반려동물" data-target="menuSecond8">반려동물</option>
+                                                </select>
+                                            </div>
+                                        
+                                            <div id="selectContainer2" class="select-container2">
+                                                <select id="menuSecond1" class="menu_choice">
+                                                    <option value="2차 카테고리">2차 카테고리</option>
+                                                    <option value="캔들·디퓨저">캔들·디퓨저</option>
+                                                    <option value="향수">향수</option>
+                                                    <option value="비누·배쓰밤">비누·배쓰밤</option>
+                                                    <option value="액세서리">액세서리</option>
+                                                    <option value="가죽">가죽</option>
+                                                </select>
+                                                
+                                                <select id="menuSecond2" class="menu_choice">
+                                                    <option value="2차 카테고리">2차 카테고리</option>
+                                                    <option value="베이킹">베이킹</option>
+                                                    <option value="요리">요리</option>
+                                                    <option value="떡·앙금">떡·앙금</option>
+                                                    <option value="디저트·음료">디저트·음료</option>
+                                                    <option value="커피·바리스타">커피·바리스타</option>
+                                                </select>
+                                                
+                                                <select id="menuSecond3" class="menu_choice">
+                                                    <option value="2차 카테고리">2차 카테고리</option>
+                                                    <option value="소묘">소묘</option>
+                                                    <option value="펜화">펜화</option>
+                                                    <option value="캘리그라피">캘리그라피</option>
+                                                    <option value="수채화">수채화</option>
+                                                    <option value="동양화">동양화</option>
+                                                </select>
+                                                
+                                                <select id="menuSecond4" class="menu_choice">
+                                                    <option value="2차 카테고리">2차 카테고리</option>
+                                                    <option value="피아노">피아노</option>
+                                                    <option value="우쿠렐레">우쿠렐레</option>
+                                                    <option value="보컬">보컬</option>
+                                                    <option value="작사·작곡">작사·작곡</option>
+                                                    <option value="프로듀싱">프로듀싱</option>
+                                                </select>                                                
+
+                                                <select id="menuSecond5" class="menu_choice">
+                                                    <option value="2차 카테고리">2차 카테고리</option>
+                                                    <option value="요가">요가</option>
+                                                    <option value="필라테스">필라테스</option>
+                                                </select>
+                                                
+
+                                                <select id="menuSecond6" class="menu_choice">
+                                                    <option value="2차 카테고리">2차 카테고리</option>
+                                                    <option value="피트니스">피트니스</option>
+                                                    <option value="실내 운동">실내 운동</option>
+                                                    <option value="야외 운동">야외 운동</option>
+                                                    <option value="댄스">댄스</option>
+                                                    <option value="레저">레저</option>
+                                                </select>
+                                                
+                                                <select id="menuSecond7" class="menu_choice">
+                                                    <option value="2차 카테고리">2차 카테고리</option>
+                                                    <option value="메이크업">메이크업</option>
+                                                    <option value="헤어">헤어</option>
+                                                    <option value="네일아트">네일아트</option>
+                                                    <option value="타투">타투</option>
+                                                    <option value="셀프케어">셀프케어</option>
+                                                </select>
+                                                
+                                                <select id="menuSecond8" class="menu_choice">
+                                                    <option value="2차 카테고리">2차 카테고리</option>
+                                                    <option value="펫 푸드">펫 푸드</option>
+                                                    <option value="펫 에티켓">펫 에티켓</option>
+                                                    <option value="펫 액세서리">펫 액세서리</option>
+                                                    <option value="펫 미용">펫 미용</option>
+                                                    <option value="기타 펫 클래스">기타 펫 클래스</option>
+                                                </select>
+                                                
+                                        
+                                            </div>
+                                           
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                                <div class="button_wrapper">
+                                    <span  id = "prev_button2" class = "prev">
+                                        <a id = "prev-button-color2">
+                                            이전
+                                        </a>
+                                    </span>
+                                    <span  id = "next_button2" class = "next">
+                                        <a id = "next-button-color2">
+                                            다음
+                                        </a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class ="step-active3" id = "step-active3">
+                            <div class = "step-main-3-1">
+                                <div class = "main-text">STEP 2 클래스 소개</div>
+                                
+                                <div class = "inside">
+                                    <div class = "main_pic">
+                                        <div class = "main_string">이미지</div>
+                                        <div class = "main_string2">클래스/모임을 대표하는 이미지(썸네일)에 사용될 이미지를 등록해해주세요</div>
+                                        <div class = "class_name">
+                                            <span>대표 이미지</span>
+                                            <span>(필수)</span>
+                                        </div>
+
+                                        <div class="main_pic_area">
+
+                                            <label class="custom-file-label" id = "custom-file-label1">
+                                     
+
+                                                <div id = "needToHide">
+                                                    <div id = "svgIcon">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" fill="#000000" width="800px" height="800px" viewBox="0 0 24 24"><script xmlns=""/>
+    
+                                                        <g id="Image_On" data-name="Image On">
+                                                            <g>
+                                                            <path d="M18.435,3.06H5.565a2.5,2.5,0,0,0-2.5,2.5V18.44a2.507,2.507,0,0,0,2.5,2.5h12.87a2.507,2.507,0,0,0,2.5-2.5V5.56A2.5,2.5,0,0,0,18.435,3.06ZM4.065,5.56a1.5,1.5,0,0,1,1.5-1.5h12.87a1.5,1.5,0,0,1,1.5,1.5v8.66l-3.88-3.88a1.509,1.509,0,0,0-2.12,0l-4.56,4.57a.513.513,0,0,1-.71,0l-.56-.56a1.522,1.522,0,0,0-2.12,0l-1.92,1.92Zm15.87,12.88a1.5,1.5,0,0,1-1.5,1.5H5.565a1.5,1.5,0,0,1-1.5-1.5v-.75L6.7,15.06a.5.5,0,0,1,.35-.14.524.524,0,0,1,.36.14l.55.56a1.509,1.509,0,0,0,2.12,0l4.57-4.57a.5.5,0,0,1,.71,0l4.58,4.58Z"/>
+                                                            <path d="M8.062,10.565a2.5,2.5,0,1,1,2.5-2.5A2.5,2.5,0,0,1,8.062,10.565Zm0-4a1.5,1.5,0,1,0,1.5,1.5A1.5,1.5,0,0,0,8.062,6.565Z"/>
+                                                            </g>
+                                                        </g>
+                                                        <script xmlns=""/></svg>
+                                                    </div>
+  
+                                                    <div class = "text_area_image">
+                                                        <div>이미지 추가하기</div>
+                                                        <div>클릭 후 이미지를 추가해 주세요</div>
+                                                    </div>
+                                                    <input type="file" class="file-input" id="file-input1">
+                                                </div>
+
+                                                <div id="preview" class = "preview">
+                                                    <img id="filePreview" class="filePreview" src="" alt="">
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class = "next_string1">· 용량은 3mb 이하를 사용해 주세요</div>
+                                        <div class = "next_string2">· 이미지 사이즈는 750px * 500px (3:2)이에요 (비율이 맞지 않으면 이미지가 잘릴 수 있어요)</div>
+                                    </div>
+                                    
+                                    <div class = "sub_pic">
+                                        <div class = "class_name">
+                                            <span>클래스 이미지</span>
+                                            <span>(선택 - 최대 6개 선택 가능)</span>
+                                            <div>클래스/모임 이미지가 많을수록 클래스를/모임을 신청할 확률이 올라가요</div>
+                                        </div>
+                                        
+                                        <div class="sub_pic_area">
+                                            <label class="custom-file-label" id = "custom-file-label2">
+                                                
+                                                <div id="dropzone" class="dropzone">
+                                                    <div class="dz-message" id="dz-message" >
+  
+                                                        <svg xmlns="http://www.w3.org/2000/svg" fill="#000000" width="800px" height="800px" viewBox="0 0 24 24"><script xmlns=""/>
+                                                        <g id="Image_On" data-name="Image On">
+                                                            <g>
+                                                            <path d="M18.435,3.06H5.565a2.5,2.5,0,0,0-2.5,2.5V18.44a2.507,2.507,0,0,0,2.5,2.5h12.87a2.507,2.507,0,0,0,2.5-2.5V5.56A2.5,2.5,0,0,0,18.435,3.06ZM4.065,5.56a1.5,1.5,0,0,1,1.5-1.5h12.87a1.5,1.5,0,0,1,1.5,1.5v8.66l-3.88-3.88a1.509,1.509,0,0,0-2.12,0l-4.56,4.57a.513.513,0,0,1-.71,0l-.56-.56a1.522,1.522,0,0,0-2.12,0l-1.92,1.92Zm15.87,12.88a1.5,1.5,0,0,1-1.5,1.5H5.565a1.5,1.5,0,0,1-1.5-1.5v-.75L6.7,15.06a.5.5,0,0,1,.35-.14.524.524,0,0,1,.36.14l.55.56a1.509,1.509,0,0,0,2.12,0l4.57-4.57a.5.5,0,0,1,.71,0l4.58,4.58Z"/>
+                                                            <path d="M8.062,10.565a2.5,2.5,0,1,1,2.5-2.5A2.5,2.5,0,0,1,8.062,10.565Zm0-4a1.5,1.5,0,1,0,1.5,1.5A1.5,1.5,0,0,0,8.062,6.565Z"/>
+                                                            </g>
+                                                        </g>
+                                                        <script xmlns=""/></svg>
+
+                                                        <div class = "text_area_image">
+                                                            <div>이미지 추가하기</div>
+                                                            <div>클릭 후 이미지를 추가해 주세요</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                        </div>
+
+                                        <div class = "next_string1">· 클래스/모임 이미지가 많을수록 클래스를/모임을 신청할 확률이 올라가요</div>
+                                        
+                                    </div>
+                                    
+                                </div>
+                                <div class="button_wrapper">
+                                    <span  id = "prev_button3" class = "prev">
+                                        <a id = "prev-button-color3">
+                                            이전
+                                        </a>
+                                    </span> 
+                                    <span  id = "next_button3" class = "next">
+                                        <a id = "next-button-color3">
+                                            다음
+                                        </a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class ="step-active4" id = "step-active4">
+                            <div class = "step-main-4-1">
+                                <div class = "main-text">STEP 2 클래스 소개</div>
+                                
+                                <div class = "inside">
+                                    <div class = "main_description">
+                                        <div class = "main_string">상세 내용</div>
+                                        <div class = "main_string2">상세 내용을 작성해 주세요</div>
+                                        <div class = "class_name">
+                                            <span>클래스 상세 내용</span>
+                                            <span>(필수)</span>
+                                        </div>
+                                        <div class = "summernote">
+                                            <textarea id="summernote" name="content"></textarea>
+                                            <span>최소 40자 이상 써주세요</span>
+                                            <span id = "charCount2">0/1000</span>
+                                        </div>
+
+                                        <div class= "recommendations">
+                                            <div class = "top-row">
+                                                <span>이런분들이 들으면 좋아요</span>
+                                                <span>(선택/최대 10개)</span>
+                                                <span class = "add_button" id="add_button">
+                                                    <div>+</div>
+                                                    <a>추가</a>
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        <div class = "recommendation_container" id = "recommendation_container">
+                                            <div class = "bottom-row" id = "bottom-row">
+                                                <input type = 'text' id ="recommendation"  placeholder = '클래스를 추천해 주고 싶은 분을 적어주세요.'>
+                                                <div class = "delete_button" id = "delete_button">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="800px" height="800px" viewBox="0 0 24 24" fill="none"><script xmlns=""/>
+                                                        <path d="M4 6H20M16 6L15.7294 5.18807C15.4671 4.40125 15.3359 4.00784 15.0927 3.71698C14.8779 3.46013 14.6021 3.26132 14.2905 3.13878C13.9376 3 13.523 3 12.6936 3H11.3064C10.477 3 10.0624 3 9.70951 3.13878C9.39792 3.26132 9.12208 3.46013 8.90729 3.71698C8.66405 4.00784 8.53292 4.40125 8.27064 5.18807L8 6M18 6V16.2C18 17.8802 18 18.7202 17.673 19.362C17.3854 19.9265 16.9265 20.3854 16.362 20.673C15.7202 21 14.8802 21 13.2 21H10.8C9.11984 21 8.27976 21 7.63803 20.673C7.07354 20.3854 6.6146 19.9265 6.32698 19.362C6 18.7202 6 17.8802 6 16.2V6M14 10V17M10 10V17" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <script xmlns=""/>
+                                                    </svg>
+                                                    <a>삭제</a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                    
+                                </div>
+							<div class="button_wrapper">
+								<span id="prev_button4" class="prev"> <a
+									id="prev-button-color4">이전</a>
+								</span> <span id="next_button4" class="next"> <a
+									id="next-button-color4">다음</a>
+								</span>
+							</div>
+						</div>
+                        </div>
+
+                        <div class ="step-active5" id = "step-active5">
+                            <div class = "step-main5-1">
+                                <div class = "main-text">STEP 2 클래스 소개</div>
+                                
+                                <div class = "inside">
+                                    <div class = "main_description">
+                                        <div class = "main_string">커리큘럼</div>
+                                        <div class = "main_string2">커리큘럼을 단계별로 작성해 주세요</div>
+                                        <div class = "class_name">
+                                            <span>커리큘럼 상세 내용</span>
+                                            <span>(필수)</span>
+                                        </div>
+                                        <div class = "sub_description">
+                                            <div class = " ect">이 외에 시간으로 정하고 싶으시면 문의 바랍니다.</div>
+                                            <div class = "difficulty">
+                                                <span class = "sub_name">난이도</span>
+                                                <div>
+                                                    <span id = "beginner"><a href="#" data-value="1">입문</a></span>
+                                                    <span id = "intermediate"><a href="#" data-value="2">중급</a></span>
+                                                    <span id = "advanced"><a href="#" data-value="3">고급</a></span>
+                                                </div>
+                                            </div>
+                                            <div class = "hours">
+                                                <span class = "sub_name">소요시간</span>
+                                                <div>
+                                                    <span id = "hour1"><a href="#" data-value="60">1시간</a></span>
+                                                    <span id = "hour2"><a href="#" data-value="120">2시간</a></span>
+                                                    <span id = "hour3"><a href="#" data-value="180">3시간</a></span>
+                                                    <span id = "hour4"><a href="#" data-value="240">4시간</a></span>
+                                                    <span id = "hour5"><a href="#" data-value="300">5시간</a></span>
+                                                </div>
+                                            </div>
+
+                                            <div class = "string">
+                                                <div class = "f_r">
+                                                    <div class = "class_name2">
+                                                        <span>원데이 클래스의 단계를 입력해주세요</span>
+                                                        <span>(필수)</span>
+                                                    </div>
+                                             
+                                                        <span class = "add_button" id = "add_button2">
+                                                            <div>+</div>
+                                                            <a>추가</a>
+                                                        </span>
+                                            
+                                                </div>
+                                                <div class = "l_r">단계는 총 5단계까지 작성 할 수 있습니다</div>
+
+                                            </div>
+                                            <div id="curriculum-container"></div>
+                                        </div>
+
+
+
+                                    </div>
+                                    
+                                </div>
+                                <div class="button_wrapper">
+                                    <span  id = "prev_button5" class = "prev">
+                                        <a id = "prev-button-color5">
+                                            이전
+                                        </a>
+                                    </span> 
+                                    <span  id = "next_button5" class = "next">
+                                        <a id = "next-button-color5">
+                                            다음
+                                        </a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class ="step-active6" id = "step-active6">
+                            <div class = "step-main6-1">
+                                <div class = "main-text">STEP 2 클래스 소개</div>
+                            
+                                <div class = "inside">
+                                    <div class = "main_description">
+                                        <div class = "main_string">강사 소개</div>
+                                        <div class = "main_string2">강사님에 대해 소개해주세요</div>
+                                        
+                                        <div class = "sub_string">
+                                            <span>강사님 사진</span>
+                                            <span>(필수)</span>
+                                        </div>
+                                        <div class = "user_pic_area">
+                                            <div class = "user_pic" id = "user_pic">
+
+                                                <div id="preview2" class = "preview2">
+                                                    <img id="filePreview2" class="filePreview2" src="" alt="">
+                                                </div>
+                                             
+                                                <svg id = "needToHide2" xmlns="http://www.w3.org/2000/svg" width="800px" height="800px" viewBox="0 0 24 24" fill="none">
+                                                    <circle cx="12" cy="8" r="4" fill="#2A4157" fill-opacity="0.24"/>
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 13C8.33033 13 5.32016 15.4204 5.02395 18.5004C4.99752 18.7753 5.22389 19 5.50003 19H18.5C18.7762 19 19.0025 18.7753 18.9761 18.5004C18.6799 15.4204 15.6697 13 12 13Z" fill="#2A4157" fill-opacity="0.24"/>
+                                                    <path d="M18.5 13.5V19.5" stroke="rgb(18,51,100)" stroke-linecap="round"/>
+                                                    <path d="M15.5 16.5H21.5" stroke="rgb(18,51,100)" stroke-linecap="round"/>
+                                                </svg>
+                                            
+                                            </div>
+                                            <label class = "user_add_button">
+                                                <input type="file" class="file-input2" id = "file-input2">
+                                                <div class = "change_name_for_user_add_button">사진 등록</div>
+                                            </label>
+                                        </div>
+
+                                        <div class = "user_info">
+                                            <span>상호명 또는 닉네임</span>
+                                            <span>(필수)</span>
+                                            <div class= "user_nickname">
+                                                <span>
+                                                    <input type = "text" placeholder="상호명 또는 닉네임을 입력해주세요" id = "user_nickname">
+                                                </span>
+                                                <span id = char_count_nikname>0/15</span>
+                                            </div>
+                                        </div>
+
+                                        <div class = "user_introduction">
+                                            <span>강사님 소개</span>
+                                            <span>(필수)</span>
+                                            <div>
+                                                <textarea name="user_description"  id = "user_description" cols="50" rows="5"placeholder="강사님의 소개글을 작성해주세요 &#10;최소 40자 이상"></textarea>
+                                                <div id = "char_count_description">0/600</div>
+                                            </div>
+                                        </div>
+
+                                        
+
+
+                                    </div>
+                                    
+                                </div>
+                                <div class="button_wrapper">
+                                    <span  id = "prev_button6" class = "prev">
+                                        <a id = "prev-button-color6">
+                                            이전
+                                        </a>
+                                    </span> 
+                                    <span  id = "next_button6" class = "next">
+                                        <a id = "next-button-color6">
+                                            다음
+                                        </a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class ="step-active7" id = "step-active7">
+                            <div class = "step-main7-1">
+                                <div class = "main-text">STEP 2 클래스 소개</div>
+                               
+                                <div class = "inside">
+                                    <div class = "main_description">
+                                        <div class = "main_string">공간 정보</div>
+                                        <div class = "main_string2">클래스/모임 공간에 대해 소개해주세요</div>
+                                        <div class = "sub_string">
+                                            <span>클래스 주소</span>
+                                            <span>(필수)</span>
+                                        </div>
+                                        <div class = "sub_map">
+                                            <div>
+                                                <input id="selectedAddressContainer" class="map_info" placeholder="주소를 검색해주세요">
+                                                <button id="searchButton" type="button">주소 검색</button>
+                                            </div>
+                                            <div>
+                                                <input  id="selectedAddressContainer2" type = "text" placeholder="상세 주소를 입력해주세요">
+                                            </div>
+                                                
+                                            <div id="searchPopup">
+                                                <div id="closeButton">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="800px" height="800px" viewBox="0 0 24 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M19.207 6.207a1 1 0 0 0-1.414-1.414L12 10.586 6.207 4.793a1 1 0 0 0-1.414 1.414L10.586 12l-5.793 5.793a1 1 0 1 0 1.414 1.414L12 13.414l5.793 5.793a1 1 0 0 0 1.414-1.414L13.414 12l5.793-5.793z" fill="#000000"/></svg>
+                                                </div>
+                                                <div class = "search_div">
+                                                    <input id="addressInput" type="text" placeholder="도로명 주소를 입력하세요">
+                                                    <button id="submitButton">검색</button>
+                                                </div>
+                                                <div id="results"></div>
+                                                <button id="confirmButton">확인</button>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class = "map_box">지도 정보</div>
+                                        <div id = "map"></div>
+
+                                        <div class = "map-detail">
+                                            <div>찾아오는길 (선택)</div>
+                                            <div>
+                                                <input type = "text" placeholder="수강생이 쉽게 찾아올 수 있게 설명해주세요">
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    
+                                </div>
+                                <div class="button_wrapper">
+                                    <span  id = "prev_button7" class = "prev">
+                                        <a id = "prev-button-color7">
+                                            이전
+                                        </a>
+                                    </span> 
+                                    <span  id = "next_button7" class = "next">
+                                        <a id = "next-button-color7">
+                                            다음
+                                        </a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class ="step-active8" id = "step-active8">
+                            <div class = "step-main8-1">
+                                <div class = "main-text">STEP 2 클래스 소개</div>
+                                
+                                <div class = "inside">
+                                    <div class = "main_description">
+                                        <div>
+                                            <span class = "main_string">제공 및 유의사항</span>
+                                            <span class = "main_string2">(선택)</span>
+                                        </div>
+                                        <div class = "sub_string1">
+                                            <span>제공 사항</span>
+                                            <span>(중복가능)</span>
+                                        </div>
+                                        <div class = "check-group1">
+                                           
+                                            <div class = "check">
+                                                <span>
+                                                    <input type="checkbox"/>
+                                                </span>
+                                                <span class = "check_string">와이파이를 제공해요</span>
+                                            </div>
+    
+                                            <div class = "check">
+                                                <span>
+                                                    <input type="checkbox"/>
+                                                </span>
+                                                <span class = "check_string">포토존이 있어요</span>
+                                            </div>
+                                            <div class = "check">
+                                                <span>
+                                                    <input type="checkbox"/>
+                                                </span>
+                                                <span class = "check_string">주차공간이 있어요</span>
+                                            </div>
+                                            <div class = "check">
+                                                <span>
+                                                    <input type="checkbox"/>
+                                                </span>
+                                                <span class = "check_string">반려동물 동반이 가능해요</span>
+                                            </div>
+                                        
+                                            <div class = "check">
+                                                <span>
+                                                    <input type="checkbox"/>
+                                                </span>
+                                                <span class = "check_string">간단한 음료 및 다과를 제공해요</span>
+                                            </div>
+                                            <div class = "check">
+                                                <span>
+                                                    <input type="checkbox"/>
+                                                </span>
+                                                <span class = "check_string">앞치마 및 장갑을 제공해요</span>
+                                            </div>
+                                            <div class = "check">
+                                                <span>
+                                                    <input type="checkbox"/>
+                                                </span>
+                                                <span class = "check_string">포장 용기를 제공해요</span>
+                                            </div>
+    
+                                            <div class = "check">
+                                                <span>
+                                                    <input type="checkbox"/>
+                                                </span>
+                                                <span>
+                                                    <input class = "inputbox"  type = 'text'  id = "ect_input" placeholder = '기타 입력'>
+                                                </span>
+                                            </div>
+                                           
+                                        </div>
+                                        
+                                        <div class = "sub_string2">
+                                            <span>건강 및 안전 사항</span>
+                                            <span>(중복가능)</span>
+                                        </div>
+                                        <div class = "check-group2">
+                                           
+                                            <div class = "check">
+                                                <span>
+                                                    <input type="checkbox"/>
+                                                </span>
+                                                <span class = "check_string">손세정제가 비치 되어있어요</span>
+                                            </div>
+    
+                                            <div class = "check">
+                                                <span>
+                                                    <input type="checkbox"/>
+                                                </span>
+                                                <span class = "check_string">실내 소독을 해요</span>
+                                            </div>
+                                            <div class = "check">
+                                                <span>
+                                                    <input type="checkbox"/>
+                                                </span>
+                                                <span class = "check_string">거리두기를 준수해요</span>
+                                            </div>
+                                            <div class = "check">
+                                                <span>
+                                                    <input type="checkbox"/>
+                                                </span>
+                                                <span>
+                                                    <input class = "inputbox"  type = 'text'  id = "ect_input" placeholder = '기타 입력'>
+                                                </span>
+                                            </div>
+                                           
+                                        </div>
+
+                                    </div>
+                                    
+                                </div>
+                                <div class="button_wrapper">
+                                    <span  id = "prev_button8" class = "prev">
+                                        <a id = "prev-button-color8">
+                                            이전
+                                        </a>
+                                    </span> 
+                                    <span  id = "next_button8" class = "next">
+                                        <a id = "next-button-color8">
+                                            다음
+                                        </a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class ="step-active9" id = "step-active9">
+                            <div class = "step-main9-1">
+                                <div class = "main-text">STEP 3 금액 및 일정</div>
+                                
+                                <div class = "inside">
+                                    <div class = "main_description">
+                                        <div>
+                                            <span class = "main_string">클래스/모임 가격</span>
+                                            <span class = "main_string2">(필수)</span>
+                                        </div>
+                                        <div class = "sub_string1">
+                                            원데이 클래스/모임 수강료를 등록해주세요
+                                        </div>
+                                    </div>
+
+                                    <div class = "sub_description">
+                                        <div class = "column1">
+                                            <div class = "row">
+                                                <div>1인 수강 금액</div>
+                                                <div>
+                                                    <span>
+                                                        <input type = "text" id = "price_per_person">
+                                                    </span>
+                                                    <span>원</span>
+                                                </div>
+                                            </div>
+                                            <div class = "row">
+                                                <div class = "row-1">
+                                                    <span>
+                                                        <input type="checkbox" id = "discount_checkbox">
+                                                    </span>
+                                                    <span>할인 비율 설정</span>
+                                                </div>
+                                                <div>
+                                                    <span>
+                                                        <input type = "text" id = "discount_percentage">
+                                                    </span>
+                                                    <span>%</span>
+                                                </div>
+                                            </div>
+                                            <div class = "row">
+                                                <div>할인된 금액</div>
+                                                <div>
+                                                    <span>
+                                                        <input type = "text" id = "final_price">
+                                                    </span>
+                                                    <span>원</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class = "column2">
+                                            
+                                            <div class = "row">
+                                                <div>수강료</div>
+                                                <div id = "price_per_person_result">원</div>
+                                            </div>
+                                            <div class = "row">
+                                                <div>원천 징수 세금 (3.3%)</div>
+                                                <div id = "tax">원</div>
+                                            </div>
+                                            <div class = "row">
+                                                <div>카드사 수수료 (2.53%)</div>
+                                                <div id = "card_commission">원</div>
+                                            </div>
+                                            <div class = "row">
+                                                <div>
+                                                    <span><input type="checkbox" id = "website_commission_checkbox"/></span>
+                                                    <span id = "website_commission">플랫폼 수수료 (90%)</span>
+                                                </div>
+                                                <div>원</div>
+                                            </div>
+                                            <div class = "row">
+                                                <div>최종 정산 받으시는 금액</div>
+                                                <div id = "final_result">원</div>
+                                            </div>
+                                            
+                                            
+                                        </div>
+                                    </div>
+                                    <div class = "result-button" id = "result-button">
+                                        <svg id = "buttonIcon" xmlns="http://www.w3.org/2000/svg" width="800px" height="800px" viewBox="0 0 24 24">
+                                            <path  id="button-icon-path" fill-rule="evenodd" clip-rule="evenodd" d="M12 22C7.28595 22 4.92893 22 3.46447 20.5355C2 19.0711 2 16.714 2 12C2 7.28595 2 4.92893 3.46447 3.46447C4.92893 2 7.28595 2 12 2C16.714 2 19.0711 2 20.5355 3.46447C22 4.92893 22 7.28595 22 12C22 16.714 22 19.0711 20.5355 20.5355C19.0711 22 16.714 22 12 22ZM8.75 6.49998C8.75 6.08576 8.41421 5.74998 8 5.74998C7.58579 5.74998 7.25 6.08576 7.25 6.49998L7.25 7.74999H6C5.58579 7.74999 5.25 8.08578 5.25 8.49999C5.25 8.91421 5.58579 9.24999 6 9.24999L7.25 9.24999V10.5C7.25 10.9142 7.58579 11.25 8 11.25C8.41421 11.25 8.75 10.9142 8.75 10.5V9.24999H10C10.4142 9.24999 10.75 8.91421 10.75 8.49999C10.75 8.08578 10.4142 7.74999 10 7.74999H8.75L8.75 6.49998ZM14 7.74998C13.5858 7.74998 13.25 8.08576 13.25 8.49998C13.25 8.91419 13.5858 9.24998 14 9.24998H18C18.4142 9.24998 18.75 8.91419 18.75 8.49998C18.75 8.08576 18.4142 7.74998 18 7.74998H14ZM14 13.75C13.5858 13.75 13.25 14.0858 13.25 14.5C13.25 14.9142 13.5858 15.25 14 15.25H18C18.4142 15.25 18.75 14.9142 18.75 14.5C18.75 14.0858 18.4142 13.75 18 13.75H14ZM7.03033 13.9697C6.73744 13.6768 6.26256 13.6768 5.96967 13.9697C5.67678 14.2626 5.67678 14.7374 5.96967 15.0303L6.93935 16L5.96968 16.9697C5.67679 17.2626 5.67679 17.7374 5.96968 18.0303C6.26258 18.3232 6.73745 18.3232 7.03034 18.0303L8.00001 17.0607L8.96966 18.0303C9.26255 18.3232 9.73742 18.3232 10.0303 18.0303C10.3232 17.7374 10.3232 17.2626 10.0303 16.9697L9.06067 16L10.0303 15.0303C10.3232 14.7374 10.3232 14.2626 10.0303 13.9697C9.73744 13.6768 9.26256 13.6768 8.96967 13.9697L8.00001 14.9393L7.03033 13.9697ZM14 16.75C13.5858 16.75 13.25 17.0858 13.25 17.5C13.25 17.9142 13.5858 18.25 14 18.25H18C18.4142 18.25 18.75 17.9142 18.75 17.5C18.75 17.0858 18.4142 16.75 18 16.75H14Z" />
+                                        </svg>
+                                        <a id="button-text">계산하기</a>
+                                    </div>
+                                </div>
+                                <div class="button_wrapper">
+                                    <span  id = "prev_button9" class = "prev">
+                                        <a id = "prev-button-color9">
+                                            이전
+                                        </a>
+                                    </span> 
+                                    <span  id = "next_button9" class = "next">
+                                        <a id = "next-button-color9">
+                                            완료
+                                        </a>
+                                    </span>
+                                </div>
+                                <div>완료 버튼을 누르신 후 오른쪽 상단에 등록하기 버튼을 눌러주세요</div>
+                            </div>
+                        </div>
+                       </form>                
+
+                   
+                </div>
+            </div>
+            
+        </main>
+
+        <footer th:fragment = "footer">
+        
+            <div class = "first_footer">
+            
+                <div class = "logo">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="80" zoomAndPan="magnify" viewBox="0 0 1500 449.999984" height="40" preserveAspectRatio="xMidYMid meet" version="1.0"><defs><g/></defs><g fill="#000000" fill-opacity="1"><g transform="translate(0.774502, 374.591265)"><g><path d="M 264.40625 -193.8125 C 275.539062 -184.90625 275.46875 -175.019531 264.1875 -164.15625 C 252.914062 -153.289062 240.875 -153.289062 228.0625 -164.15625 L 146.203125 -233.078125 L 64.328125 -164.15625 C 51.515625 -153.289062 39.46875 -153.289062 28.1875 -164.15625 C 16.914062 -175.019531 16.847656 -184.90625 27.984375 -193.8125 L 106.515625 -257.3125 L 41.765625 -257.3125 C 31.460938 -257.3125 26.238281 -264.34375 26.09375 -278.40625 C 25.957031 -292.46875 31.179688 -299.5 41.765625 -299.5 L 120.296875 -299.5 L 120.296875 -328.3125 C 120.296875 -341.675781 128.578125 -348.359375 145.140625 -348.359375 C 161.710938 -348.359375 170 -341.675781 170 -328.3125 L 170 -299.5 L 248.53125 -299.5 C 259.394531 -299.5 264.753906 -292.46875 264.609375 -278.40625 C 264.472656 -264.34375 259.113281 -257.3125 248.53125 -257.3125 L 185.875 -257.3125 Z M 347.53125 -9.1875 C 347.53125 4.175781 339.242188 10.859375 322.671875 10.859375 C 306.109375 10.859375 297.828125 4.175781 297.828125 -9.1875 L 297.828125 -324.140625 C 297.828125 -337.503906 306.109375 -344.1875 322.671875 -344.1875 C 339.242188 -344.1875 347.53125 -337.503906 347.53125 -324.140625 Z M 175.015625 -9.1875 C 175.015625 4.175781 166.726562 10.859375 150.15625 10.859375 C 133.59375 10.859375 125.3125 4.175781 125.3125 -9.1875 L 125.3125 -98.15625 C 125.3125 -99.269531 125.171875 -100.242188 124.890625 -101.078125 C 124.609375 -101.921875 123.492188 -102.34375 121.546875 -102.34375 L 22.140625 -102.34375 C 11.835938 -102.34375 6.613281 -109.375 6.46875 -123.4375 C 6.332031 -137.5 11.554688 -144.53125 22.140625 -144.53125 L 148.703125 -144.53125 C 158.722656 -144.53125 165.613281 -141.953125 169.375 -136.796875 C 173.132812 -131.640625 175.015625 -125.863281 175.015625 -119.46875 Z M 175.015625 -9.1875 "/></g></g></g><g fill="#000000" fill-opacity="1"><g transform="translate(398.003094, 374.591265)"><g><path d="M 337.921875 -9.1875 C 337.921875 4.175781 329.632812 10.859375 313.0625 10.859375 C 296.5 10.859375 288.21875 4.175781 288.21875 -9.1875 L 288.21875 -324.140625 C 288.21875 -337.503906 296.5 -344.1875 313.0625 -344.1875 C 329.632812 -344.1875 337.921875 -337.503906 337.921875 -324.140625 Z M 225.140625 -68.921875 C 225.140625 -55.554688 216.851562 -48.800781 200.28125 -48.65625 C 183.71875 -48.519531 175.4375 -55.273438 175.4375 -68.921875 L 175.4375 -288.640625 C 175.4375 -289.742188 175.296875 -290.710938 175.015625 -291.546875 C 174.734375 -292.390625 173.617188 -292.8125 171.671875 -292.8125 L 83.546875 -292.8125 C 81.585938 -292.8125 80.46875 -292.390625 80.1875 -291.546875 C 79.914062 -290.710938 79.78125 -289.742188 79.78125 -288.640625 L 79.78125 -94.8125 C 79.78125 -93.695312 79.914062 -92.722656 80.1875 -91.890625 C 80.46875 -91.054688 81.585938 -90.640625 83.546875 -90.640625 L 150.796875 -90.640625 C 161.367188 -90.640625 166.585938 -83.609375 166.453125 -69.546875 C 166.316406 -55.484375 161.097656 -48.453125 150.796875 -48.453125 L 56.390625 -48.453125 C 46.367188 -48.453125 39.476562 -51.023438 35.71875 -56.171875 C 31.957031 -61.328125 30.078125 -67.109375 30.078125 -73.515625 L 30.078125 -309.9375 C 30.078125 -316.34375 31.957031 -322.117188 35.71875 -327.265625 C 39.476562 -332.421875 46.367188 -335 56.390625 -335 L 198.828125 -335 C 208.847656 -335 215.738281 -332.421875 219.5 -327.265625 C 223.257812 -322.117188 225.140625 -316.34375 225.140625 -309.9375 Z M 225.140625 -68.921875 "/></g></g></g><g fill="#000000" fill-opacity="1"><g transform="translate(785.624762, 374.591265)"><g><path d="M 315.359375 -222.21875 C 326.773438 -214.695312 327.75 -205.15625 318.28125 -193.59375 C 308.820312 -182.039062 298.519531 -180.023438 287.375 -187.546875 L 179.1875 -266.078125 L 71.015625 -187.546875 C 59.867188 -180.023438 49.5625 -182.039062 40.09375 -193.59375 C 30.625 -205.15625 31.597656 -214.695312 43.015625 -222.21875 L 142.015625 -292.8125 L 61.8125 -292.8125 C 51.507812 -292.8125 46.289062 -299.84375 46.15625 -313.90625 C 46.019531 -327.96875 51.238281 -335 61.8125 -335 L 296.5625 -335 C 307.425781 -335 312.785156 -327.96875 312.640625 -313.90625 C 312.503906 -299.84375 307.144531 -292.8125 296.5625 -292.8125 L 215.953125 -292.8125 Z M 106.09375 20.46875 C 96.070312 20.46875 89.179688 17.890625 85.421875 12.734375 C 81.660156 7.585938 79.78125 1.8125 79.78125 -4.59375 L 79.78125 -82.703125 C 79.78125 -96.066406 88.0625 -102.75 104.625 -102.75 C 121.195312 -102.75 129.484375 -96.066406 129.484375 -82.703125 L 129.484375 -25.890625 C 129.484375 -24.785156 129.625 -23.8125 129.90625 -22.96875 C 130.1875 -22.132812 131.300781 -21.71875 133.25 -21.71875 L 322.890625 -21.71875 C 333.742188 -21.71875 339.03125 -14.6875 338.75 -0.625 C 338.476562 13.4375 333.050781 20.46875 322.46875 20.46875 Z M 203.84375 -142.4375 C 203.84375 -136.03125 201.960938 -130.25 198.203125 -125.09375 C 194.441406 -119.945312 187.550781 -117.375 177.53125 -117.375 L 22.140625 -117.375 C 11.554688 -117.375 6.332031 -124.40625 6.46875 -138.46875 C 6.613281 -152.53125 11.835938 -159.5625 22.140625 -159.5625 L 150.375 -159.5625 C 152.320312 -159.5625 153.429688 -159.28125 153.703125 -158.71875 C 153.984375 -158.164062 154.125 -158.445312 154.125 -159.5625 L 154.125 -203 C 154.125 -216.363281 162.410156 -223.046875 178.984375 -223.046875 C 195.554688 -223.046875 203.84375 -216.363281 203.84375 -203 Z M 203.84375 -142.4375 "/></g></g></g><g fill="#000000" fill-opacity="1"><g transform="translate(1143.172305, 374.591265)"><g><path d="M 295.3125 -40.515625 C 295.3125 -18.515625 286.46875 0.414062 268.78125 16.28125 C 251.101562 32.15625 229.59375 40.09375 204.25 40.09375 C 178.632812 40.09375 156.914062 32.226562 139.09375 16.5 C 121.269531 0.769531 112.359375 -18.234375 112.359375 -40.515625 C 112.359375 -62.796875 121.269531 -81.734375 139.09375 -97.328125 C 149.394531 -106.515625 161.226562 -113.054688 174.59375 -116.953125 L 174.59375 -134.921875 C 174.59375 -136.035156 174.453125 -137.007812 174.171875 -137.84375 C 173.898438 -138.675781 172.789062 -139.09375 170.84375 -139.09375 L 22.140625 -139.09375 C 11.835938 -139.09375 6.613281 -146.125 6.46875 -160.1875 C 6.332031 -174.25 11.554688 -181.28125 22.140625 -181.28125 L 197.984375 -181.28125 C 208.015625 -181.28125 214.910156 -178.703125 218.671875 -173.546875 C 222.429688 -168.398438 224.3125 -162.625 224.3125 -156.21875 L 224.3125 -119.046875 C 241.019531 -115.984375 255.773438 -108.742188 268.578125 -97.328125 C 286.398438 -81.734375 295.3125 -62.796875 295.3125 -40.515625 Z M 315.359375 -230.578125 C 326.773438 -223.054688 327.75 -213.515625 318.28125 -201.953125 C 308.820312 -190.398438 298.519531 -188.382812 287.375 -195.90625 L 179.1875 -269.84375 L 71.015625 -195.90625 C 59.867188 -188.382812 49.5625 -190.398438 40.09375 -201.953125 C 30.625 -213.515625 31.597656 -223.054688 43.015625 -230.578125 L 137.421875 -292.8125 L 61.8125 -292.8125 C 51.507812 -292.8125 46.289062 -299.84375 46.15625 -313.90625 C 46.019531 -327.96875 51.238281 -335 61.8125 -335 L 296.5625 -335 C 307.425781 -335 312.785156 -327.96875 312.640625 -313.90625 C 312.503906 -299.84375 307.144531 -292.8125 296.5625 -292.8125 L 220.546875 -292.8125 Z M 245.609375 -40.515625 C 245.609375 -51.097656 241.566406 -60.078125 233.484375 -67.453125 C 225.410156 -74.835938 215.664062 -78.53125 204.25 -78.53125 C 192.832031 -78.53125 183.085938 -74.835938 175.015625 -67.453125 C 166.941406 -60.078125 162.90625 -51.097656 162.90625 -40.515625 C 162.90625 -30.210938 166.941406 -21.300781 175.015625 -13.78125 C 183.085938 -6.257812 192.832031 -2.5 204.25 -2.5 C 215.664062 -2.5 225.410156 -6.257812 233.484375 -13.78125 C 241.566406 -21.300781 245.609375 -30.210938 245.609375 -40.515625 Z M 245.609375 -40.515625 "/></g></g></g></svg>            
+                </div>
+                <div class = "check_footer">
+                    <div><a href="/teamA">팀 소개</a></div>
+                    <div><a href="/terms?p=1">이용약관</a></div>
+                    <div><a href="/terms?p=2">개인정보처리방침</a></div>
+                    <div><a href="/terms?p=3">사업자 정보 확인</a></div>
+                    <div><a href="/terms?p=4">고객센터</a></div>
+                    <div><a href="/terms?p=5">서비스 소개</a></div>
+                </div>
+    
+            </div>
+            <div class = "second_footer">
+                <p>
+                    (주)취미존중
+                </p>
+            
+                <div class = "items">
+                    <div class = "address">서울특별시 노원구 상계로1길 34 세일학원 5층 코리아IT아카데미 </div>
+                    <div class = "ceo">대표이사 이용현  |  © 주식회사 막내와 팀장들  |  사업자등록번호 123-12-123456  |  통신판매업신고번호 2024-서울노원-1234</div>
+                </div> 
+         
+                <div class = "language">
+                    <dl>
+                        <dt>
+                            <button type = "button">
+                                <div class = "icon_globe">
+                                    <img src = "/image/icon/globe.png" >
+                                </div>
+                                <div>KOR</div>
+                                <div>▼</div>
+                            </button>
+                        </dt>
+                        <dd class style="transform: translate(0px, -2px); opacity: 0;">
+                            <a href="https://login.taobao.com/member/login.jhtml?redirectURL=http%3A%2F%2Fdrghzp.world.tmall.com%2Fshop%2Fview_shop.htm&amp;uuid=42d70ded92ecc6c10ef299d6826288cc" target="_blank" title="새창">
+                                <img src="https://img.dr-g.co.kr/resources/assets/imgs/uio/ico__CHN.svg" style="width:20px;padding-right: 5px;">
+                                CHN
+                            </a>
+                            <a href="http://www.dr-g.co.jp/" target="_blank" title="새창">
+                                <img src="https://img.dr-g.co.kr/resources/assets/imgs/uio/ico__JAP-1.svg" style="width:20px;padding-right: 5px;">
+                                JPN
+                            </a>
+                            <a href="https://www.dr-g.com/" target="_blank" title="새창">
+                                <img src="https://img.dr-g.co.kr/resources/assets/imgs/uio/ico__global02.svg" style="width:20px;padding-right: 5px;">
+                                ENG
+                            </a>
+                        </dd>
+                    </dl>
+                    <span class="copyright">
+                        Copyright © CHIMIJONJUNG Co.,Ltd. All Rights Reserved.
+                    </span>
+                    </div>
+            </div>
+            <div class = "third_footer">
+                <div class = "icons">
+                    <a><img src = "/image/icon/naver_blog.png"></a>
+                    <a><img src = "/image/icon/facebook.png"></a>
+                    <a><img src = "/image/icon/insta.png"></a>
+                    <a><img src = "/image/icon/youtube.png"></a>
+                </div>
+                <div class = "num_time">
+                    <div>
+                        고객센터 1111-2222
+                    </div>
+                    <div>
+                        평일 : 9:30 ~ 17:00
+                    </div>
+                    <div>
+                        점심 : 12:30 ~ 13:30 
+                    </div>
+                    <div>
+                        (매주 수요일 12:00 ~ 14:00)
+                    </div>
+                    <div>
+                        토요일, 일요일, 공휴일 휴무입니다.
+                    </div>
+                </div>
+                
+            </div>
+        </footer>
+           
+
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.18/lang/summernote-ko-KR.min.js"></script>
+
+
+        <script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
+
+        
+        <script src = "/js/registration-main-firststep.js"></script>
+        <script src = "/js/registration-main-secondstep2.js"></script>
+        <script src = "/js/registration-main-secondstep3.js"></script>
+        <script src = "/js/registration-main-secondstep4.js"></script> 
+        <script src = "/js/registration-main-secondstep5.js"></script> 
+        <script src = "/js/registration-main-secondstep6.js"></script> 
+        <script src = "/js/registration-main-secondstep7.js"></script> 
+        <script src = "/js/registration-main-secondstep8.js"></script> 
+        <script src = "/js/registration-main-secondstep9.js"></script> 
+        <script src="/js/registration.js"></script>
+    </body>
+
+
+</html>
